@@ -33,7 +33,9 @@ docker run --rm -it -v $(pwd):/ansible/playbooks localz/ansible-playbook site.ym
 
 Ansible playbook variables can simply be added after the playbook name.
 
+```
 docker run --rm -v $(pwd):/ansible/playbooks -v ~/.ssh/id_localz:/id_localz localz/ansible-playbook playbooks/ftp-order-status.yml -i inventory/hosts -u username --private-key /id_localz -e job=job_id -e project=project_id
+```
 
 ### Ansible Helper wrapper
 
